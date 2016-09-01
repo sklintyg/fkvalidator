@@ -20,41 +20,20 @@
  */
 package se.skl.skltpservices.adapter.fk.regmedcert;
 
-import static se.skl.skltpservices.adapter.fk.regmedcert.RegisterMedicalCertificateUtil.findAktivitetWithCode;
-import static se.skl.skltpservices.adapter.fk.regmedcert.RegisterMedicalCertificateUtil.findArbetsformaga;
-import static se.skl.skltpservices.adapter.fk.regmedcert.RegisterMedicalCertificateUtil.findFunktionsTillstandType;
-import static se.skl.skltpservices.adapter.fk.regmedcert.RegisterMedicalCertificateUtil.findReferensTyp;
-import static se.skl.skltpservices.adapter.fk.regmedcert.RegisterMedicalCertificateUtil.findTypAvSysselsattning;
-import static se.skl.skltpservices.adapter.fk.regmedcert.RegisterMedicalCertificateUtil.findVardkontaktTyp;
+import static se.skl.skltpservices.adapter.fk.regmedcert.RegisterMedicalCertificateUtil.*;
 import static se.skl.skltpservices.adapter.fk.util.ValidatorUtil.getValidationErrors;
 import static se.skl.skltpservices.adapter.fk.util.ValidatorUtil.validateHoSPersonal;
 import static se.skl.skltpservices.adapter.fk.util.ValidatorUtil.validatePatient;
-import iso.v21090.dt.v1.II;
 
 import java.util.ArrayList;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.AktivitetType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.Aktivitetskod;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.ArbetsformagaNedsattningType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.ArbetsuppgiftType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.FunktionstillstandType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.LakarutlatandeType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.MedicinsktTillstandType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.Prognosangivelse;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.ReferensType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.Referenstyp;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.SysselsattningType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.TypAvFunktionstillstand;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.TypAvSysselsattning;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.VardkontaktType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.Vardkontakttyp;
+import iso.v21090.dt.v1.II;
+import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.*;
 import se.inera.ifv.insuranceprocess.healthreporting.registermedicalcertificateresponder.v3.RegisterMedicalCertificateType;
-import se.inera.ifv.insuranceprocess.healthreporting.v2.EnhetType;
-import se.inera.ifv.insuranceprocess.healthreporting.v2.HosPersonalType;
-import se.inera.ifv.insuranceprocess.healthreporting.v2.PatientType;
+import se.inera.ifv.insuranceprocess.healthreporting.v2.*;
 
 public class Vard2FkValidator {
 	private final Logger logger = LoggerFactory.getLogger(getClass());

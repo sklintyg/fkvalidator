@@ -22,17 +22,7 @@ package se.skl.skltpservices.adapter.fk.regmedcert;
 
 import java.util.List;
 
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.AktivitetType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.Aktivitetskod;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.ArbetsformagaNedsattningType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.FunktionstillstandType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.ReferensType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.Referenstyp;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.SysselsattningType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.TypAvFunktionstillstand;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.TypAvSysselsattning;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.VardkontaktType;
-import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.Vardkontakttyp;
+import se.inera.ifv.insuranceprocess.healthreporting.mu7263.v3.*;
 
 public final class RegisterMedicalCertificateUtil {
 
